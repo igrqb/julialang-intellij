@@ -11,6 +11,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.igrqb.julialangintellij.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <platform.lsp.serverSupportProvider implementation="com.github.igrqb.julialangintellij.lsp.JuliaLspServer"/>
     </extensions>
 
     <applicationListeners>

@@ -16,5 +16,6 @@ internal class JuliaLspServer : LspServerSupportProvider {
 
 private class JuliaLspServerDescriptor(project: Project) : ProjectWideLspServerDescriptor(project, "Julia") {
   override fun isSupportedFile(file: VirtualFile) = file.extension == "jl"
-  override fun createCommandLine() = GeneralCommandLine("julia", "-e", "\"using LanguageServer; runserver()\"")
+  override fun createCommandLine() = GeneralCommandLine("julia")
+    .withParameters("-e", "\"using LanguageServer; runserver()\"")
 }
